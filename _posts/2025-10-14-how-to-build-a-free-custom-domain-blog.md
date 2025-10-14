@@ -13,6 +13,8 @@ All you need is a GitHub account — no servers, no paid hosting, and no setup c
 yourusername.github.io
 ```
 
+![image demonstrating how to add repo] (/assets/images/repo-creation.png)
+
 Replace `yourusername` with your GitHub username.  
 Example: if your username is `alex123`, name your repo `alex123.github.io`.
 
@@ -95,8 +97,14 @@ Jekyll uses the date from the filename to sort posts chronologically.
 
 ### 6. Enable GitHub Pages
 1. Go to your repository on GitHub.  
-2. Click **Settings → Pages**.  
-3. Under **Source**, choose:
+
+![github repo settings] (/assets/images/github-settings.jpeg)
+
+2. Click **Settings → Pages**.
+
+![repo settings pages] (/assets/images/settings-pages.jpeg)
+  
+3. Scroll down and under **Source**, choose:
 
 ```
 Deploy from a branch
