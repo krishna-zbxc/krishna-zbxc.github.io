@@ -1,53 +1,50 @@
-## How to Build a Free Custom-Domain Blog Using GitHub Pages and Jekyll
+## How to Build a Free Blog Using GitHub Pages and Jekyll
 
 ### Introduction
-I built this entire blog for free using **GitHub Pages** and **Jekyll**, with my own custom domain and HTTPS.  
-If you want a personal blog that costs nothing to host and looks professional, this guide walks through every step.
+You can build a complete, secure, and professional-looking blog **for free** using **GitHub Pages** and **Jekyll**.  
+All you need is a GitHub account — no servers, no paid hosting, and no setup costs.
 
 ---
 
-### 1. Create Your GitHub Repository
-1. Log in to GitHub and create a new repo named:
+### 1. Create a GitHub Repository
+1. Log in to GitHub and create a new repository named:
    ```
    yourusername.github.io
    ```
-   Replace `yourusername` with your actual GitHub username.
-2. Leave it public — GitHub Pages requires that for free hosting.
+   Replace `yourusername` with your GitHub username.  
+   Example: if your username is `alex123`, name your repo `alex123.github.io`.
+2. Keep the repository **public** — that’s required for GitHub Pages.
 
 ---
 
-### 2. Connect Your Local Folder
-If you already have files on your computer, link them to GitHub:
+### 2. Clone the Repository to Your Computer
+If you don’t have any files yet, start fresh by cloning the empty repo:
 
 ```bash
-cd /path/to/your/blog
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/<yourusername>/<yourusername>.github.io.git
-git branch -M main
-git push -u origin main
+git clone https://github.com/<yourusername>/<yourusername>.github.io.git
+cd <yourusername>.github.io
 ```
 
-Now your local folder is connected to your GitHub repo.
+Now you can create your blog files inside this folder.
 
 ---
 
 ### 3. Add Jekyll Configuration
-In the root of your repo, create `_config.yml`:
+Create a file named `_config.yml` in the root of your folder.  
+This tells GitHub Pages how to build your site.
 
 ```yaml
-title: Your Blog Title
-description: Personal tech notes and experiments
+title: My Blog
+description: A simple blog built with GitHub Pages and Jekyll
 theme: minima
 ```
 
-The **Minima** theme is included with GitHub Pages and is mobile-friendly.
+The **Minima** theme comes preinstalled with GitHub Pages and works perfectly on desktop and mobile.
 
 ---
 
-### 4. Add Your Homepage
-Create an `index.md` file:
+### 4. Add a Homepage
+Create a file called `index.md`:
 
 ```markdown
 ---
@@ -55,96 +52,100 @@ layout: home
 title: "Welcome"
 ---
 
-Hi, I’m Krishna — a tech enthusiast who loves exploring gadgets, phones, and all things digital.
+Welcome to my new blog!  
+This site is powered by **Jekyll** and hosted for free on **GitHub Pages**.  
 
-This blog is where I share what I’m working on, what I’m tinkering with, and other experiments in tech.
+Stay tuned for updates and new posts.
 ```
 
 ---
 
-### 5. Add Your First Post
-Inside a folder named `_posts`, create a file like:
+### 5. Add Your First Blog Post
+Create a folder named `_posts`, then add a file with this format:
 
 ```
-_posts/2025-10-13-my-first-post.md
+_posts/YYYY-MM-DD-title.md
 ```
+
+Example:
+```
+_posts/2025-10-15-my-first-post.md
+```
+
+Inside the file, add:
 
 ```markdown
 ---
-title: "My first post"
-date: 2025-10-13
+title: "My First Post"
+date: 2025-10-15
 layout: post
 ---
 
-**Hi everyone!**
-
-Welcome to my new blog. This is where I’ll share what I’m working on, the tech I explore, and my thoughts on phones, gadgets, and other interesting stuff I come across.
+This is my very first post!  
+Jekyll will automatically generate a page for it and display it on the homepage.
 ```
 
-Jekyll reads the date from the filename and automatically builds a post URL like:
-
-```
-https://yourusername.github.io/2025/10/13/my-first-post.html
-```
+Jekyll uses the date from the filename to sort posts chronologically.
 
 ---
 
 ### 6. Enable GitHub Pages
-1. Go to **Settings → Pages** in your repository.  
-2. Under **Source**, select:
+1. Go to your repository on GitHub.  
+2. Click **Settings → Pages**.  
+3. Under **Source**, choose:
    ```
    Deploy from a branch
    ```
-3. Set:
+4. Select:
    - **Branch:** main  
    - **Folder:** /(root)
+5. Click **Save**.
 
-After a short build, your site will appear at:
+After a minute or two, your site will be live at:
 ```
 https://yourusername.github.io
 ```
 
 ---
 
-### 7. Add a Custom Domain
-If you have a custom domain (like `yourblog.com` or from any free DNS provider), create DNS records pointing to GitHub Pages.
+### 7. (Optional) Add a Custom Domain
+If you have your own domain (for example, `myblog.com`), you can point it to GitHub Pages.
 
-Use the following A records:
+1. Go to your domain provider’s DNS settings.  
+2. Add these A records:
+   ```
+   185.199.108.153
+   185.199.109.153
+   185.199.110.153
+   185.199.111.153
+   ```
+3. In your repository root, create a file named **CNAME** containing:
+   ```
+   myblog.com
+   ```
+4. In **Settings → Pages**, check **Enforce HTTPS**.
 
-```
-185.199.108.153
-185.199.109.153
-185.199.110.153
-185.199.111.153
-```
-
-Then, in your GitHub repo root, create a file named **CNAME** with:
-```
-yourblog.com
-```
-
-Finally, go to **Settings → Pages** and check **Enforce HTTPS**.  
-Your blog will now load securely from your custom domain.
+Your site will now be available securely at your custom domain.
 
 ---
 
-### 8. Adding Code Blocks in Jekyll
-Jekyll supports Markdown code blocks with syntax highlighting.
+### 8. Adding Code Blocks
+You can include code snippets in your posts using Markdown’s fenced code blocks.
 
+Example:
 ```bash
 git add .
-git commit -m "update"
+git commit -m "First post"
 git push
 ```
 
-You can specify the language for highlighting:
-
+To highlight a specific language:
 ```python
 def greet(name):
     print(f"Hello, {name}!")
 ```
 
-Make sure your `_config.yml` has:
+Make sure your `_config.yml` includes:
 ```yaml
 markdown: kramdown
 highlighter: rouge
@@ -153,22 +154,22 @@ highlighter: rouge
 ---
 
 ### 9. Optional Enhancements
-- Add an **About** page (`about.md`)
-- Include a **favicon** for browser tabs  
-- Customize colors or layout via `_sass/minima`  
-- Add **Google Analytics** or **Plausible** for traffic stats  
-- Write posts in Affine → Export as Markdown → Push to GitHub  
+- Add an **About** page (`about.md`)  
+- Include a **favicon** for your site  
+- Customize colors or layout in `_sass/minima`  
+- Add analytics (Google Analytics or Plausible)  
+- Write posts locally → commit → push → site updates automatically  
 
 ---
 
 ### TL;DR
-- Create a repo named `yourusername.github.io`  
+- Create a public repo named `yourusername.github.io`  
 - Add `_config.yml`, `index.md`, and `_posts/`  
-- Enable GitHub Pages in repo settings  
-- Point your domain to GitHub IPs  
-- Enjoy your free HTTPS-secured personal blog 🎉  
+- Enable GitHub Pages in Settings  
+- (Optional) Add a custom domain  
+- Every time you push a post, it goes live automatically 🎉  
 
 ---
 
-**And that’s it!**  
-You now have a fully working, mobile-friendly, custom-domain blog built entirely on free tools — GitHub Pages and Jekyll.
+You now have a **fully functional, free, mobile-friendly blog** built with **GitHub Pages** and **Jekyll**.  
+Happy blogging!
