@@ -117,13 +117,8 @@ services:
 
 ## 🚀 Step 4 — Start n8n
 
-### Windows
 
-```powershell
-docker compose up -d
-```
-
-### macOS / Linux
+### Windows / macOS / Linux
 
 ```bash
 docker compose up -d
