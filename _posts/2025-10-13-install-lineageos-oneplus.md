@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Installing LineageOS 22.2 on My OnePlus Nord CE 2 Lite — A Personal Flashing Story"
+title: Tech Diaries: Installing LineageOS 22.2 on My OnePlus Nord CE 2 Lite
 date: 2025-10-13
 categories: android custom-rom oneplus lineageos
 ---
