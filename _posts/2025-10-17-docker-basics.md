@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Docker Made Simple: Run Your First Container on Any System (Windows, macOS, Linux)
-date: 2025-10-17
+title: Docker Made Simple - Run Your First Container on Any System (Windows, macOS, Linux)
+date: 2025-10-16
 categories: docker linux macos windows tutorial
 ---
 
@@ -153,5 +153,5 @@ From here, you can explore databases, automation tools, and even deploy entire w
 
 ---
 
-**Last updated:** *October 17, 2025*  
+**Last updated:** *October 16, 2025*  
 — Krishna
