@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker Made Simple: Run Your First Container on Any System (Windows, macOS, Linux)"
-date: 2025-10-16
+date: 2025-10-17
 categories: docker linux macos windows tutorial
 ---
 
