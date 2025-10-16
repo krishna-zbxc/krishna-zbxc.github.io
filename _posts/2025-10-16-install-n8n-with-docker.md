@@ -85,7 +85,7 @@ cd ~/n8n-docker
 
 ## 🧾 Step 3 — Create the Docker Compose File
 
-Create `docker-compose.yml` inside the folder:
+Create `docker-compose.yml` inside the folder and change "<your port>" to your port of choice:
 
 ```yaml
 version: "3.8"
@@ -95,7 +95,7 @@ services:
     image: docker.n8n.io/n8nio/n8n:latest
     restart: always
     ports:
-      - "5678:5678"
+      - "<your port>:5678"
     environment:
       - GENERIC_TIMEZONE=Europe/Helsinki
       - N8N_BASIC_AUTH_ACTIVE=true
@@ -105,7 +105,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
       - NODE_ENV=production
-      - WEBHOOK_TUNNEL_URL=http://localhost:5678/
+      - WEBHOOK_TUNNEL_URL=http://localhost:<your port>/
     volumes:
       - ./n8n_data:/home/node/.n8n
 ```
@@ -141,17 +141,12 @@ docker compose ps
 Once the container is running, open:
 
 ```
-http://localhost:5678
+http://localhost:<your port>
 ```
 
-Login credentials:
+You should see an admin setup. Set it up.
 
-```
-Username: admin
-Password: changeme
-```
-
-You should see the n8n canvas open and ready.  
+Then, you should see the n8n canvas open and ready.  
 Mine showed **v1.115.3**, which is a stable Docker build.
 
 ---
