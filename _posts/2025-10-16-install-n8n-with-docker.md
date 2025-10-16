@@ -24,7 +24,7 @@ You’ll need:
 
 ### 🪟 Windows
 
-1. Download **Docker Desktop** → [docker.com](https://www.docker.com/products/docker-desktop)  
+1. Download **Docker Desktop** from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)  
 2. During setup:  
    - ✅ Enable **WSL 2 backend**  
    - ✅ Enable **“Use Docker Compose V2”**  
@@ -48,7 +48,7 @@ docker --version
 docker compose version
 ```
 
-Or download the `.dmg` file from [docker.com](https://www.docker.com/products/docker-desktop).
+Or download the `.dmg` file directly from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
 
 ---
 
@@ -85,7 +85,8 @@ cd ~/n8n-docker
 
 ## 🧾 Step 3 — Create the Docker Compose File
 
-Create `docker-compose.yml` inside the folder and change `<your port>` to your port of choice:
+Create `docker-compose.yml` inside the folder.  
+You can use any port you like — here we’ll use **5678** (change if it’s already in use).
 
 ```yaml
 version: "3.8"
@@ -95,7 +96,7 @@ services:
     image: docker.n8n.io/n8nio/n8n:latest
     restart: always
     ports:
-      - "<your port>:5678"
+      - "5678:5678"
     environment:
       - GENERIC_TIMEZONE=Europe/Helsinki
       - N8N_BASIC_AUTH_ACTIVE=true
@@ -105,7 +106,7 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
       - NODE_ENV=production
-      - WEBHOOK_TUNNEL_URL=http://localhost:<your port>/
+      - WEBHOOK_TUNNEL_URL=http://localhost:5678/
     volumes:
       - ./n8n_data:/home/node/.n8n
 ```
@@ -141,12 +142,10 @@ docker compose ps
 Once the container is running, open:
 
 ```
-http://localhost:<your port>
+http://localhost:5678
 ```
 
-You should see an admin setup. Set it up.
-
-Then, you should see the n8n canvas open and ready.  
+You should see an admin setup page. Create your account, and then you’ll land on the **n8n workflow canvas**.  
 Mine showed **v1.115.3**, which is a stable Docker build.
 
 ---
