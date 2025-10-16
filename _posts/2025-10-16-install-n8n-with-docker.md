@@ -85,7 +85,7 @@ cd ~/n8n-docker
 
 ## 🧾 Step 3 — Create the Docker Compose File
 
-Create `docker-compose.yml` inside the folder and change "<your port>" to your port of choice:
+Create `docker-compose.yml` inside the folder and change `<your port>` to your port of choice:
 
 ```yaml
 version: "3.8"
