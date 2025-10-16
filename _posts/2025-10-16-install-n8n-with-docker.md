@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How I Installed n8n with Docker (Windows, macOS, and Linux)"
+title: "How I Installed n8n with Docker (TUTORIAL) (Windows, Mac and Linux)"
 date: 2025-10-16
 categories: [automation, n8n, docker]
 ---
