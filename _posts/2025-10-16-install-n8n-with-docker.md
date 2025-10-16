@@ -252,4 +252,4 @@ If you see that, congrats — your n8n installation is alive and has a sense of 
 ## 🎯 Final Thoughts
 
 That’s it — a clean, working **n8n** setup running in Docker on any platform.  
-Now you can start building your own workflows, connecting APIs, and automating your daily tasks right from your local machine.
+Now you can start building your own workflows, connecting APIs, and automating your daily tasks right from your local machine. Stay tuned for my Docker Basics post tomorrow, August 17th!
