@@ -24,7 +24,7 @@ You’ll need:
 
 ### 🪟 Windows
 
-1. Download **Docker Desktop** → [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)  
+1. Download **Docker Desktop** → [docker.com](https://www.docker.com/products/docker-desktop)  
 2. During setup:  
    - ✅ Enable **WSL 2 backend**  
    - ✅ Enable **“Use Docker Compose V2”**  
