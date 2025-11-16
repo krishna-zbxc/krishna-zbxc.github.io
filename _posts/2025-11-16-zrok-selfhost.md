@@ -1,10 +1,8 @@
-
-
 ---
-layout: post
-title: "How to Self-Host zrok on Your Domain"
+title: "Selfhosting zrok on a VPS"
 date: 2025-11-16
-categories: self-hosting tutorial
+categories: [Tech, Personal Projects]
+tags: [self-hosting]
 ---
 
 ## Introduction  
