@@ -44,7 +44,7 @@ services:
       - ./docker-data/mailserver/config:/tmp/docker-mailserver
       - /etc/letsencrypt:/etc/letsencrypt:ro
     restart: unless-stopped
-
+```
 Deploying it was as simple as running:
 docker compose up -d
 
