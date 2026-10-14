@@ -64,6 +64,7 @@ Getting my mail to actually land in inboxes instead of spam folders was the hard
    v=DMARC1; p=quarantine; rua=mailto:dmarc@[your-domain]; fo=1
 
  * Reverse DNS (PTR): I updated my VPS provider's control panel to ensure my server IP's PTR record matched my outbound HELO identity (mail.[your-domain]), preventing receiving servers from rejecting my messages.
+---
 Conclusion
 After running external tests on Mail-Tester, my server achieved a solid 8.8/10 score with full SPF and DMARC verification.
 Building a mail server from scratch while battling a fragile setup is definitely a trial-by-fire experience, but having full control over my own email infrastructure and seeing it pass all authentication checks makes the hours of debugging totally worth it.
