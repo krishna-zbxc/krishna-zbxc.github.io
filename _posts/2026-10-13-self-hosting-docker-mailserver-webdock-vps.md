@@ -46,8 +46,9 @@ services:
     restart: unless-stopped
 ```
 Deploying it was as simple as running:
+``` bash
 docker compose up -d
-
+```
 2. Handling SSL/TLS & Client Integration
 To avoid TLS handshake errors, I made sure my container mounts the system's Let's Encrypt live directories as read-only.
 Connecting it to my mail client took a bit of fine-tuning. Pointing Apple Mail explicitly to my server hostname (mail.[your-domain]) rather than my root domain cleared up the certificate trust warnings immediately, allowing secure IMAP and SMTP connections.
